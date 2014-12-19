@@ -1,6 +1,8 @@
 package dev.suncha.mannersphoto;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
@@ -16,8 +18,13 @@ import android.view.ViewGroup;
  */
 public class NavigationDrawerFragment extends Fragment {
 
+    public static final String PREF_FILE_NAME="testpref";
+
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
+
+    private boolean mUserLearnedDrawer;
+    private boolean mFromSavedInstance;
 
 
     public NavigationDrawerFragment() {
@@ -48,5 +55,18 @@ public class NavigationDrawerFragment extends Fragment {
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+    }
+
+    public static void saveToPreference(Context context, String preferenceName,String preferenceValue){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor =sharedPreferences.edit();
+        editor.putString(preferenceName,preferenceValue);
+        editor.apply();
+    }
+
+    public static readFromPreferences(Context context, String preferenceName,String defaultValue){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_FILE_NAME,Context.MODE_PRIVATE);
+        return sharedPreferences.getString(preferenceName,defaultValue);
+
     }
 }

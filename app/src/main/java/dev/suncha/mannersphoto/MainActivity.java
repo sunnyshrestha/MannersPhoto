@@ -19,6 +19,8 @@ public class MainActivity extends ActionBarActivity {
         toolbar=(android.support.v7.widget.Toolbar)findViewById(R.id.myToolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
        NavigationDrawerFragment drawerFragment=(NavigationDrawerFragment)
                getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
 
