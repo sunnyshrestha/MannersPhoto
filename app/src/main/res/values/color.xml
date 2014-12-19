@@ -3,4 +3,5 @@
     <color name="primarycolor">#5677fc</color>
     <color name="darkerprimary">#455ede</color>
     <color name="pinkaccent">#f06292</color>
+    <color name="drawer">#e0e0e0</color>
 </resources>

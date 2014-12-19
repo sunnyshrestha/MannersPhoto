@@ -14,7 +14,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_appbar);
 
         toolbar=(android.support.v7.widget.Toolbar)findViewById(R.id.myToolbar);
         setSupportActionBar(toolbar);
@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity {
        NavigationDrawerFragment drawerFragment=(NavigationDrawerFragment)
                getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
 
-        drawerFragment.setUp((DrawerLayout)findViewById(R.id.drawerLayout),toolbar);
+        drawerFragment.setUp(R.id.fragment_navigation_drawer,(DrawerLayout)findViewById(R.id.drawerLayout),toolbar);
 
     }
 
