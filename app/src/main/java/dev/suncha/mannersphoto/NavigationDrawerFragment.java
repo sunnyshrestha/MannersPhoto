@@ -50,7 +50,9 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View layout= inflater.inflate(R.layout);//https://www.youtube.com/watch?v=Wq2o4EbM74k&index=13&list=PLonJJ3BVjZW6CtAMbJz1XD8ELUs1KXaTD
+        View layout= inflater.inflate(R.layout.fragment_navigation_drawer,container,false);
+        recyclerView = (RecyclerView)layout.findViewById(R.id.drawerList);
+        return layout;
     }
 
 
