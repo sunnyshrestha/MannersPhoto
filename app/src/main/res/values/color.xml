@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primarycolor">#5677fc</color>
-    <color name="darkerprimary">#455ede</color>
+    <color name="primarycolor">#f36c60</color>
+    <color name="darkerprimary">#e51c23</color>
     <color name="pinkaccent">#f06292</color>
     <color name="drawer">#e0e0e0</color>
 </resources>
